@@ -1,0 +1,55 @@
+@import "../../styles/UI-kit.scss";
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (width < $lg) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  height: fit-content;
+  width: 300px;
+  min-height: 120px;
+  background-color: transparent;
+
+  border: 1px solid $input-bg;
+  border-radius: 18px;
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    row-gap: 8px;
+  }
+
+  .title {
+    h1 {
+      font-size: 18px;
+      color: $white;
+      text-align: flex-start;
+      padding: 15px 0 10px 15px;
+      border-bottom: 1px solid $input-bg;
+    }
+
+    ::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  @media (width < $lg) {
+    width: 100%;
+    min-height: 120px;
+    height: fit-content;
+  }
+}

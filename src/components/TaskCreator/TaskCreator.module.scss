@@ -1,0 +1,47 @@
+@import '../../styles/UI-kit.scss';
+
+.creator {
+  position: absolute;
+  left: auto;
+  top: 86vh;
+
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 22px;
+  background-color: $primary;
+
+  @media (width < $lg) {
+    position: relative;
+    height: 120px;
+    top: 0px;
+    width: 100%;
+
+    padding: 0;
+    background-color: transparent;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+}
+.button {
+  @include button();
+}
+.input_wrap {
+  width: 280px;
+  margin-right: 20px;
+}
+.input {
+  @include input();
+
+}

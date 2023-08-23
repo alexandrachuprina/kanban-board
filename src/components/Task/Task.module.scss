@@ -1,0 +1,115 @@
+@import "../../styles/UI-kit.scss";
+
+@mixin task {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: grab;
+
+  background-color: $primary;
+  border-radius: $border;
+  padding: 20px 16px;
+
+  p {
+    font-style: normal;
+    color: $light;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  .icon {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    p {
+      text-transform: lowercase;
+      &::first-letter {
+        text-transform: lowercase;
+      }
+      margin-right: 16px;
+      cursor: pointer;
+
+      color: $bg;
+      background-color: rgba(250, 250, 250, 0.1);
+      box-sizing: border-box;
+      padding: 6px 10px;
+      border-radius: 999px;
+
+      transition: all 0.3s;
+      
+      &:hover {
+        background-color: $input-bg;
+      }
+    }
+  }
+
+  .delete {
+    opacity: 0;
+  }
+
+  transition: all 0.3s;
+
+  &:hover {
+    p {
+      color: $white;
+    }
+    .options {
+      p {
+        color: $primary;
+      }
+    }
+    .delete {
+      opacity: 1;
+    }
+  }
+}
+
+.purple {
+  @include task();
+  .icon {
+    background-color: $purple;
+  }
+  &:hover {
+    background-color: $purple-hover;
+  }
+}
+.blue {
+  @include task();
+  .icon {
+    background-color: $blue;
+  }
+  &:hover {
+    background-color: $blue-hover;
+  }
+}
+.orange {
+  @include task();
+  .icon {
+    background-color: $orange;
+  }
+  &:hover {
+    background-color: $orange-hover;
+  }
+}
+.green {
+  @include task();
+  .icon {
+    background-color: $green;
+  }
+  &:hover {
+    background-color: $green-hover;
+  }
+}
