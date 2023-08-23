@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-import styles from "./Task.module.scss";
+import styles from "./Task.module.scss"
 
 interface TaskProps {
   id: number;
