@@ -34,5 +34,5 @@ export interface ITask {
 export const defaultTask: ITask = {
   id: 0,
   column: "to do",
-  title: " ",
+  title: "Your first task!",
 };
