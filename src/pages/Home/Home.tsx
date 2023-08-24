@@ -3,6 +3,7 @@ import styles from "./Home.module.scss";
 import TaskCreator from "../../components/TaskCreator/TaskCreator";
 import TasksList from "../../components/TasksList/TasksList";
 import { ITask, defaultTask } from "../../types/types";
+import PopUp from "../../components/PopUp/PopUp";
 
 const Home = () => {
   const [tasks, setTasks] = useState<ITask[]>([defaultTask]);
@@ -17,6 +18,7 @@ const Home = () => {
 
   return (
     <div className={styles.page}>
+        <PopUp/>
       <div className={styles.content}>
         <TaskCreator tasks={tasks} setTasks={setTasks} />
         <TasksList tasks={tasks} setTasks={setTasks} />

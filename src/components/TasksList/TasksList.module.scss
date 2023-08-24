@@ -1,10 +1,10 @@
 @import "../../styles/UI-kit.scss";
 
 .columns {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
   width: 100%;
+  grid-template-columns: repeat(4, 22%);
+  column-gap: 3%;
 
   @media (width < $lg) {
     width: 100%;
@@ -19,7 +19,7 @@
   flex-direction: column;
   row-gap: 20px;
   height: fit-content;
-  width: 300px;
+  width: 100%;
   min-height: 120px;
   background-color: transparent;
 
